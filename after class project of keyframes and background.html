@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+        body{
+            height: 6000px;
+            width: 6000px;
+            background:radial-gradient(circle,violet 15% ,
+                                        rgb(144, 69, 197) 25%,
+                                             rgb(153, 0, 255) 40%,
+                                                rgb(23, 126, 211) );  
+            }
+                                    
+        @keyframes move{
+            0%{background-color: red;left:0px; top:0px;}         /*u can also keep the colour same for all steps*/
+            25%{background-color: orangered;left:400px; top:0px;}  /* but here i have changed*/
+            50%{background-color:orange;left:400px; top:400px;}
+            75%{background-color: yellow;left:0px; top:400px;}
+            100%{background-color: red;left:0px; top:0px;}
+        }
+    /* in the above code we have used % to define the animation steps i.e.in which step waht will happen and where to move  */
+
+            .box {
+            color:white;
+            height: 100px;
+            width:  100px;
+            background-color:  white;
+            align-content:center;    /* aligns the content inside the box vertically at the center but only if the box has a defined height */
+            text-align:center; 
+            position: relative;
+             animation-name:move;       /* the animation name will have to be same as name after the @keyframes tag */
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
+         
+     
+        @keyframes homework{
+            0%,100%{background-color:navy ;right:0px; bottom:0px;}        
+            25%,75%{background-color: pink ;right:-400px; bottom:0px;}  
+            50%{background-color:  rgb(6, 56, 6);right:-400px; bottom:-400px;}
+           
+           
+        }
+
+         .homework{
+            height: 100px;
+            width:  400px;
+            background-color:  white;
+            align-content:center;    
+            text-align:center; 
+            position: relative;
+            animation-name:homework;       
+            animation-duration: 20s;
+            animation-iteration-count: infinite;   
+         }
+
+
+</style>
+</head>
+
+<body>
+
+<!-- here i made abox and i want the content inside the box of red color -->
+    <div class="box" style="color:black;"> <b>I added it from my creativity </b></div>
+<!-- we have used tge class selectors for the above div tag -->
+    
+
+    <div class="homework" style="color: white; 
+                   font-family: cursive;
+                    font-weight: bold;">for the h/w that sir have given us i.e.right side and downward movement
+                                                                            </div>
+
+                    
+
+</body>
+
+</html>
