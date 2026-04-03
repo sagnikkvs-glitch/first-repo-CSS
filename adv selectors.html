@@ -1,0 +1,84 @@
+<html>  
+<head>   <title>Advanced Selectors,pseudo-elements,and selectors</title>
+    <style>
+            h1::before{content: "Before "; color: red;}  /*thats the pseudo-element selector here we are selecting the h1 tag and adding content before it and changing its color to red*/
+            h2::after{content: " After"; color: blue;}   /*thats the pseudo-element selector here we are selecting the h2 tag and adding content after it and changing its color to blue*/
+            
+            input[type="text"]{                     /*thats the attribute selector*/
+                border: 2px solid red;          
+                padding: 5px;
+            }
+
+            ol>li:first-child{                       /*thats the child selector here ol is for the parent and li is for the child*/ 
+                color: blue;                        
+            }
+                                 
+            h1+p{
+                color: red;                        /*thats the sibling selector thats for the first p tag after the h tag*/
+            }
+
+            div p{color:aquamarine;}                 /*thats the descendant selector here we are selecting all the p tags inside the div tag*/
+
+            h2 ~ q{color: pink;}                      /*thats the general sibling selector here we are selecting all the q tags(u can give different tags also) that are siblings of h2 tag*/
+
+            button:hover{background-color: white;       /*thats the pseudo-class selector here we are selecting the button tag when we hover over it and changing its background color to yellow*/
+                         border-color: aliceblue;  }         
+            button:active{background-color: yellow;      /*thats the pseudo-class selector here we are selecting the button tag when we click on it and changing its background color to yellow*/
+                         border-color: black;  }         
+            button:focus{background-color: red;             /*thats the pseudo-class selector here we are selecting the button tag when we focus on it and changing its background color to red and border color to blue and text color to white*/
+                         border-color: blue; 
+                         border: 3px solid;}    
+
+            
+            ul {list-style:name;
+            padding:1px;
+            }
+            li:first-child{color:green;}            /*thats the pseudo-class selector here we are selecting the first li tag and changing its color to green*/
+            li:last-child{color:rgb(70, 24, 26);}   /*thats the pseudo-class selector here we are selecting the last li tag and changing its color to rgb(70, 24, 26)*/
+            
+            
+            
+            li:nth-child(3){color:rgb(70, 24, 26);}             /*thats the pseudo-class selector here we are selectingany specific no.ber from the list, i.e. the third li tag and changing its color to rgb(70, 24, 26)*/
+            li:nth-child(odd){color:rgb(144, 165, 24);}       /*thats the pseudo-class selector here we are selecting all the odd li tags and changing their color to rgb(70, 24, 26)*/
+            li:nth-child(even){color:rgb(35, 109, 93);}      /*thats the pseudo-class selector here we are selecting all the even li tags and changing their color to rgb(35, 109, 93)*/
+        
+
+    </style>  
+</head>
+
+<body>
+    <h1>hello</h1>
+    <p>Hi world</p>
+    <h2>world</h2>  <br>
+    <q>bro</q>
+  
+
+    <input type="text" placeholder="Enter your name">
+    <div>
+        <p>a</p>
+        <p>b</p>
+        <p>c</p>
+        <p>d</p>
+        <p>e</p>
+        <p>f</p>
+        <p>g</p>
+    </div>
+    
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      
+    </ol>
+    <ul>
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+        <li>Item D</li>
+        <li>Item E</li>
+    </ul>
+
+    <button>Click me</button>
+</body>
+
+</html>
